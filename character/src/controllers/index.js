@@ -1,3 +1,5 @@
+const { catchAsycn } = require('../utils');
+
 module.exports = {
-  getCharacters:require('./getCharacters'),
+  getCharacters: catchAsycn(require('./getCharacters')),
 }

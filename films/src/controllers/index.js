@@ -1,3 +1,5 @@
+const { catchAsycn } = require('../utils');
+
 module.exports = {
-  getFilms:require('./getAllFilms'),
+  getFilms: catchAsycn(require('./getAllFilms')),
 }

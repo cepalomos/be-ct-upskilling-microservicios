@@ -1,3 +1,5 @@
+const {catchAsycn} = require('../utils');
+
 module.exports = {
-  planetsAll: require('./planets'),
+  planetsAll: catchAsycn(require('./planets')),
 }

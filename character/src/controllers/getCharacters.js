@@ -1,9 +1,9 @@
-const {getCharacterDB} = require('../adapter');
+const { getCharacterDB } = require('../adapter');
+const { response } = require('../utils');
 
-const getCharacter = (req,res,next)=>{
+const getCharacter = (req, res) => {
   return getCharacterDB()
-  .then(data=>res.json(data))
-  .catch(err=>next(err));
+    .then(data => response(res, 200, data))
 };
 
 module.exports = getCharacter;

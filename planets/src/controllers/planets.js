@@ -1,8 +1,9 @@
-const {planetsAll} =require('../adapter');
+const { planetsAll } = require('../adapter');
+const { response } = require('../utils');
 
-const planets = (req,res,next) => {
+const planets = (req, res) => {
   return planetsAll()
-  .then(data => res.json(data));
+    .then(data => response(res, 200, data));
 };
 
 module.exports = planets
