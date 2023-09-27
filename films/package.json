@@ -1,5 +1,5 @@
 {
-  "name": "monolithic_version",
+  "name": "microservice_films",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
