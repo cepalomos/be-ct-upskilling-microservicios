@@ -14,7 +14,7 @@ const filmSchema = new Schema({
     list() {
       return this.find()
       .populate("characters", ["_id", "name"])
-      .populate("planets", ["_id", ""]);
+      .populate("planets", ["_id", "name"]);
     }
   }
 });
